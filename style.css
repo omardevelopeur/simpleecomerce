@@ -1,0 +1,384 @@
+body{
+    background-color: black;
+    color: yellow;
+    height: 2000px;
+} 
+
+ul{
+    list-style: none;
+}
+ul li{
+    border-radius: 15px;
+}
+ div.container{
+   position: relative;
+   max-width: 100%;
+}
+div.parent div.container span{
+    margin-top: 0%;
+    padding: 0%;
+  width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    direction: rtl;
+    background-color: rgb(50, 250, 50);
+    font-size: 25px;
+}
+div.child img{
+    width: 300px;
+    margin-top: 100px;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+button.button{
+    position: absolute;
+    margin-top: 500px;
+    font-size: 30px;
+    margin-left: 50%;
+    width: fit-content;
+    transform: translateX(-50%);
+}
+div.copy{
+    display: none;
+    background-color: grey;
+    height: 30px;
+    display: none;
+}
+div.copy div.container{
+    height: 30px;
+}
+div.copy ul{
+display: flex;
+direction: rtl;
+height: inherit;
+}
+div.copy ul li{
+    margin-left: 6%;
+    font-size: 18px;
+width:19%;
+    background-color: antiquewhite;
+    display: grid;
+align-items: center;
+justify-items: center;
+font-weight: bold;
+position: relative;
+}
+div.copy ul li::before{
+    content: "";
+ position: absolute;
+ top: 90%;
+ left: 50%;
+transform: translateX(-50%);
+border-color: black transparent transparent transparent;
+border-width: 6px;
+border-style: solid;
+display: none;
+}
+div.copy ul li:hover::before{
+    display: block;
+}
+div.second{
+    display: none;
+}
+div.second div.container{
+display: grid;
+grid-template-columns: repeat(2,45%);
+}
+div.second div.container div{
+    margin-left: 5%;
+    margin-top: 40px;
+    position: relative;
+    outline: 2px solid red;
+    animation: 4s CHANGE infinite;
+    opacity: 0.9;
+}
+div.second img{
+margin-left: 50%;
+transform: translateX(-50%);
+align-content: center;
+    position: relative;
+    display: block;
+    width: 300px;
+    height:500px ;
+    margin-top: 10px;
+}
+@keyframes CHANGE{
+0%{
+    outline: 2px red solid;
+}
+15%{
+    outline: 2px black solid;
+}
+35%{
+    outline: 2px blue solid;
+}
+55%{
+    outline: 2px yellow solid;
+}
+77%{
+    outline: 2px purple solid;
+}
+}
+div.second span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    display: none;
+}
+div.second div.container div:hover{
+opacity: 1;
+transform: skew(3deg);
+}
+div.second div.container div:hover span{
+    display: block;
+}
+div.INFO{
+    position: relative;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+div.INFO span{
+    font-size: 35px;
+}
+div.INFO div.container form{
+    max-width: 100%;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+div.INFO div.container form div{
+    margin-left: 3px;
+    margin-top: 10px;
+font-weight: bold;
+    font-size: 30px;
+}
+div.INFO div.container form div label{
+background-color: darkgrey;
+width: 200px;
+display: flex;
+justify-content: center;
+}
+input.submit{
+    position: relative;
+    margin-top: 10%;
+    margin-left: 50%;
+    font-weight: bold;
+    font-size: 32px;
+}
+input#oK,input#oN,input#oZ,input#op{
+    max-width: 100%;
+    font-size: 28px;
+}
+div.more{
+display: none;
+}
+div.more div.container{
+    direction: rtl;
+margin-left: 50%;
+transform: translateX(-50%);
+}
+div.more span{
+    color: green;
+    font-size: 35px;
+    margin-top: 7px;
+}
+div.more p{
+    margin-top: 20px;
+    font-size: 28px;
+}
+div.location{
+    display: none;
+}
+div.location div.container{
+    direction: rtl;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+div.location div.container span{
+    color: green;
+    font-size: 35px;
+    margin-top: 7px;
+}
+div.location div.container div.ville{
+    margin-top: 12px;
+}
+div.location div.container div.ville ul{
+    display: flex;
+    flex-direction: column;
+}
+div.location div.container div.ville ul li{
+    display: flex;
+    margin-top: 2px;
+    justify-content: center;
+    background-color: dimgrey;
+    width: 200px;
+    font-size: 30px;
+}
+@media (min-width:768px){
+    div.parent div.container span{
+        font-size: 40px;
+    }
+    div.copy ul li{
+        font-size: 25px;
+    }
+    div.copy ul li::before{
+        border-width: 10px;
+    }
+    div.child img{
+        width: 500px;
+    }
+    input#oK,input#oN,input#oZ,input#op{
+        font-size: 35px;
+    }
+}
+@media (max-width:300px){
+    div.child img{
+        width: 200px;
+    }
+    div.second div.container div{
+        margin-top: 60px;
+    }
+    button.button{
+        font-size: 16px;
+        margin-top: 360px;
+    }
+    div.second div.container{
+        display: grid;
+        grid-template-columns: repeat(2,42%);
+    }
+    div.second div.container div{
+        margin-top: 90px;
+        margin-left: 8%;
+    }
+    div.second img{
+        width: 100px;
+        height: 194.77px;
+    }
+    div.INFO span{
+        font-size: 18px;
+    }
+    div.INFO div.container form div{
+        font-size: 16px;
+    }
+    input.submit{
+        font-size: 18px;
+    }
+    input#oK,input#oN,input#oZ,input#op{
+        font-size: 23px;
+    }
+    div.more span{
+        font-size: 21px;
+    }
+    div.more p{
+        font-size: 17px;
+    }
+    div.location div.container div.ville ul li{
+        width: 110px;
+font-size: 18px;
+    }
+}
+@media (min-width:301px) and (max-width:449px){
+    div.second img{
+        width: 145px;
+        height: 250px;
+    }
+    div.second div.container div{
+        margin-top: 55px;
+    }
+    div.second div.container div{
+        margin-top: 75px;
+    }
+    div.INFO span{
+        font-size: 22px;
+    }
+    div.INFO div.container form div{
+        font-size: 22px;
+    }
+    input.submit{
+        font-size: 22px;
+    }
+    div.more span{
+        font-size: 24px; 
+    }
+    div.more p{
+        font-size: 20px;
+    }
+    div.location div.container div.ville ul li{
+        width: 140px;
+        font-size: 22px;
+    }
+}
+@media(min-width:450px) and (max-width: 600px){
+    div.second img{
+        width: 200px;
+        height: 340px;
+    }
+    div.second div.container div{
+        margin-top: 50px;
+    }
+    div.second div.container div{
+        margin-top: 70px;
+    }
+    div.INFO span{
+        font-size: 25px;
+    }
+    div.INFO div.container form div{
+        font-size: 25px;
+    }
+    input.submit{
+        font-size: 26px;
+    }
+    input#oK,input#oN,input#oZ,input#op{
+        font-size: 33px;
+    }
+    div.more span{
+        font-size: 28px;
+    }
+    div.more p{
+        font-size: 22px;
+    }
+    div.location div.container div.ville ul li{
+        width: 165px;
+        font-size: 25px;
+    }
+}
+@media (min-width:601) and (max-width:767px){
+    div.second img{
+        width: 250px;
+        height: 420px;
+    }
+    div.second div.container div{
+        margin-top: 50px;
+    }
+    div.second div.container div{
+        margin-top: 45px;
+    }
+    div.INFO span{
+        font-size: 28px;
+    }
+    div.INFO div.container form div{
+        font-size: 28px; 
+    }
+    input.submit{
+        font-size: 28px;
+    }
+    input#oK,input#oN,input#oZ,input#op{
+        font-size: 34px;
+    }
+    div.more span{
+font-size: 31px;
+    }
+    div.more p{
+        font-size: 25px;
+    }
+    div.location div.container div.ville ul li{
+        width: 180px;
+        font-size: 28px;
+    }
+}
